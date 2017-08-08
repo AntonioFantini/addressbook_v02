@@ -17,12 +17,12 @@ pipeline {
         load './checks/CVEChecks.groovy'
       }
     }
-    stage('Source Code Location') {
+    stage('Source Code Location Checks') {
       steps {
         load './checks/SourceCodeLocationChecks.groovy'
       }
     }
-    stage('DependenciesChecks') {
+    stage('Dependencies Checks') {
       steps {
         load './checks/DependenciesChecks.groovy'
       }
