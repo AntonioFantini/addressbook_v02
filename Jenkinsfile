@@ -17,9 +17,14 @@ pipeline {
         load './checks/CVEChecks.groovy'
       }
     }
-    stage('Dependency Checks') {
+    stage('Source Code Location') {
       steps {
-        load './checks/DependencyChecks.groovy'
+        load './checks/SourceCodeLocationChecks.groovy'
+      }
+    }
+    stage('DependenciesChecks') {
+      steps {
+        load './checks/DependenciesChecks.groovy'
       }
     }
   }
