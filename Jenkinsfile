@@ -12,5 +12,10 @@ pipeline {
         load './checks/CryptoChecks.groovy'
       }
     }
+    stage('CVE Checks') {
+      steps {
+        load './checks/CVEChecks.groovy'
+      }
+    }
   }
 }
