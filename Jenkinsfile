@@ -5,7 +5,6 @@ pipeline {
       steps {
         git(url: 'https://github.com/AntonioFantini/pipeline-tools.git', branch: 'master')
         load './checks/LicenseChecks.groovy'
-        junit(testResults: '**/target/*-reports/*.xml', allowEmptyResults: true)
       }
     }
     stage('Crypto Checks') {
