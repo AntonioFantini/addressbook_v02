@@ -17,5 +17,10 @@ pipeline {
         load './checks/CVEChecks.groovy'
       }
     }
+    stage('Dependency Checks') {
+      steps {
+        load './checks/DependencyChecks.groovy'
+      }
+    }
   }
 }
