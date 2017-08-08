@@ -8,5 +8,10 @@ pipeline {
         junit(testResults: '**/target/*-reports/*.xml', allowEmptyResults: true)
       }
     }
+    stage('Crypto Checks') {
+      steps {
+        load './checks/CryptoChecks.groovy'
+      }
+    }
   }
 }
