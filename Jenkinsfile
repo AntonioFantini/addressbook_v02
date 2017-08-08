@@ -5,6 +5,7 @@ pipeline {
       steps {
         git(url: 'https://github.com/AntonioFantini/example_product.git', branch: 'master')
         load './checks/LicenseChecks.groovy'
+        junit(testResults: '**/target/*-reports/*.xml', allowEmptyResults: true)
       }
     }
   }
