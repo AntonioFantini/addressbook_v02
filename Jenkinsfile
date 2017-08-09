@@ -7,7 +7,7 @@ pipeline {
         load './checks/LicenseChecks.groovy'
         script {
           script{
-            sh 'python python/html-geator.py'
+            sh 'python python/html-generator.py'
             
             publishHTML (target: [
               allowMissing: false,
