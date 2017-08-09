@@ -31,13 +31,15 @@ pipeline {
       steps {
         script {
           script{
+            sh 'python html-generator.py'
+            
             publishHTML (target: [
               allowMissing: false,
               alwaysLinkToLastBuild: false,
               keepAll: true,
               reportDir: 'html_report',
-              reportFiles: 'report.html',
-              reportName: "Pipeline Report"
+              reportFiles: 'py-report.html',
+              reportName: "Pipeline Report Py"
             ])
             
           }
