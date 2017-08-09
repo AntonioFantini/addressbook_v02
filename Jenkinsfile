@@ -27,5 +27,23 @@ pipeline {
         load './checks/DependenciesChecks.groovy'
       }
     }
+    stage('Publish HTML') {
+      steps {
+        script {
+          script{
+            publishHTML (target: [
+              allowMissing: false,
+              alwaysLinkToLastBuild: false,
+              keepAll: true,
+              reportDir: 'html_report',
+              reportFiles: 'report.html',
+              reportName: "Pipeline Report"
+            ])
+            
+          }
+        }
+        
+      }
+    }
   }
 }
