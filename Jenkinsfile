@@ -31,7 +31,7 @@ pipeline {
       steps {
         script {
           script{
-            sh 'python html-generator.py'
+            sh 'python ./python/html-generator.py'
             
             publishHTML (target: [
               allowMissing: false,
