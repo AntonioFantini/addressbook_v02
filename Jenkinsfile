@@ -21,6 +21,12 @@ pipeline {
           }
         }
         
+        script {
+          env.CURRENT_PROJ = currentBuild.rawBuild.project.displayName
+          
+          echo env.CURRENT_PROJ
+        }
+        
       }
     }
     stage('Crypto Checks') {
