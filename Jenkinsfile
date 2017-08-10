@@ -22,7 +22,7 @@ pipeline {
         }
         
         script {
-          env.CURRENT_PROJ = currentBuild
+          env.CURRENT_PROJ = pwd()
           
           echo env.CURRENT_PROJ
         }
