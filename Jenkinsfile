@@ -22,7 +22,7 @@ pipeline {
         }
         
         script {
-          env.CURRENT_PROJ = currentBuild.rawBuild.project.displayName
+          env.CURRENT_PROJ = currentBuild
           
           echo env.CURRENT_PROJ
         }
