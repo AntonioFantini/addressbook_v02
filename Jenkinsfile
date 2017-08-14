@@ -4,7 +4,7 @@ pipeline {
     stage('Licenses Checks') {
       steps {
         git(url: 'https://github.com/AntonioFantini/pipeline-tools.git', branch: 'master')
-        load './checks/LicenseChecks.groovy'
+        load 'checks/LicenseChecks.groovy'
         script {
           script{
             sh 'python python/html-generator.py'
